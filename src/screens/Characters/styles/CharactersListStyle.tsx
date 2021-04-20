@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const EpisodesListStyles = StyleSheet.create({
+const CharactersListStyle = StyleSheet.create({
     preloader: {
         flex: 1,
         width: 50,
@@ -20,4 +20,4 @@ const EpisodesListStyles = StyleSheet.create({
     }
 });
 
-export default EpisodesListStyles;
+export default CharactersListStyle;

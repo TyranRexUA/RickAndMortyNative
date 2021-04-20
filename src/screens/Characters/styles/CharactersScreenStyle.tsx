@@ -1,9 +1,8 @@
 import { StyleSheet } from "react-native";
 
 const CharactersScreenStyle = StyleSheet.create({
-    container: {
+    screenContainer: {
         flex: 1,
-        backgroundColor: 'gray',
     },
 });
 

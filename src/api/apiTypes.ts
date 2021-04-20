@@ -1,7 +1,7 @@
 export interface getEpisodesQueryType {
     episodes: {
         info: dataInfoType
-        results: episodeType[]
+        results: episodesItemType[]
     }
 }
 export interface dataInfoType {
@@ -17,27 +17,35 @@ export interface getSingleEpisodeType {
         "id": string
         "name": string
         "air_date": string
-        "characters": singleEpisodeCharacterType[]
+        "characters": charactersItemType[]
     }
 }
-export interface singleEpisodeCharacterType {
-    "id": string
-    "name": string
-    "image": string
+
+export interface getCharactersQueryType {
+    characters: {
+        info: dataInfoType
+        results: charactersItemType[]
+    }
 }
 
-export interface getSingleCharacterQueryType {
+export interface getSingleCharacterType {
     "character": {
         "id": string
         "name": string
         "image": string
         "species": string
         "gender": string
-        "episode": episodeType[]
+        "status": string
+        "episode": episodesItemType[]
     }
 }
 
-export interface episodeType {
+export interface episodesItemType {
     "name": string
     "id": string
+}
+export interface charactersItemType {
+    "id": string
+    "name": string
+    "image": string
 }

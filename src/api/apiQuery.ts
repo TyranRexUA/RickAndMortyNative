@@ -33,8 +33,8 @@ export const getSingleEpisodeQuery = gql`
 `
 
 export const getCharactersQuery = gql`
-    query getEpisodesQuery($page: Int!){
-        characters(page: $page) {
+    query getEpisodesQuery($page: Int!, $name: String){
+        characters(page: $page, filter: { name: $name }) {
             info {
                 count
                 pages
@@ -44,6 +44,7 @@ export const getCharactersQuery = gql`
             results {
                 name
                 id
+                image
             }
         }
     }
@@ -57,6 +58,7 @@ export const getSingleCharacterQuery = gql`
             image
             species
             gender
+            status
             episode {
                 name
                 id

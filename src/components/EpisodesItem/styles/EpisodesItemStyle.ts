@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
 
-const EpisodesListItemStyles = StyleSheet.create({
+const EpisodesItemStyle = StyleSheet.create({
     container: {
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         backgroundColor: 'whitesmoke',
@@ -19,8 +20,9 @@ const EpisodesListItemStyles = StyleSheet.create({
         marginRight: 10
     },
     itemName: {
+        flex: 1,
         fontSize: 16,
     }
 });
 
-export default EpisodesListItemStyles;
+export default EpisodesItemStyle;

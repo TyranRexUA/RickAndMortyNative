@@ -1,46 +1,64 @@
-import { useLazyQuery } from '@apollo/client';
-import { useNavigation } from '@react-navigation/core';
 import React, { useEffect, useState } from 'react';
-import {  Image, Text, TouchableOpacity } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { Keyboard, NativeScrollEvent, NativeSyntheticEvent, Text, ScrollView } from 'react-native';
+import { useLazyQuery } from '@apollo/client';
+import { ActivityIndicator, TextInput } from 'react-native-paper';
+import { charactersItemType, getCharactersQueryType } from '../../api/apiTypes';
+import { charactersColor, charactersTheme } from '../../constants/themes';
+import CharactersItem from '../../components/CharactersItem/CharactersItem';
 import { getCharactersQuery } from '../../api/apiQuery';
-import styles from './styles/CharactersListStyles';
+import styles from './styles/CharactersListStyle';
 
 const CharactersList = () => {
-    const [dataList, setDataList] = useState([])
-    const [getcharacters, { loading, error, data }] = useLazyQuery(getCharactersQuery);
-    const navigation = useNavigation();
+    const [filterName, setFilterName] = useState<string>('')
+    const [dataList, setDataList] = useState<charactersItemType[]>([])
+    const [getCharacters, { loading, error, data }] = useLazyQuery<getCharactersQueryType, { page?: number | null, name?: string }>(getCharactersQuery);
 
     useEffect(() => {
-        if (!dataList.length) getcharacters({ variables: { page: 1 } })
-    }, [])
+        setDataList([])
+        getCharacters({ variables: { page: 1, name: filterName } })
+    }, [filterName])
 
     useEffect(() => {
         if (data?.characters?.results) setDataList([...dataList, ...data.characters.results])
     }, [data])
 
-    return (
-        <ScrollView
-            onScroll={e => {
-                if (e.nativeEvent.contentOffset.y > e.nativeEvent.contentSize.height - e.nativeEvent.layoutMeasurement.height - 50 && !loading && data?.characters.info.next) {
-                    getcharacters({ variables: { page: data?.characters.info.next } })
-                }
-            }}
-            style={styles.list}
-        >
-            {dataList.map(item => (
-                <TouchableOpacity key={item.id} style={styles.item} onPress={() => {
-                    navigation.navigate('SingleCharacter', { id: item.id })
-                }}>
-                    <Text>{item.id}. {item.name}</Text>
-                </TouchableOpacity>
-            ))}
+    const scrollHandler = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+        if (e.nativeEvent.contentOffset.y > e.nativeEvent.contentSize.height - e.nativeEvent.layoutMeasurement.height - 50 && !loading && data?.characters.info.next) {
+            getCharacters({ variables: { page: data?.characters.info.next, name: filterName } })
+        }
+    }
 
-            {loading && (
-                // <ActivityIndicator size="large" />
-                <Image style={styles.preloader} source={require('../../images/preloader.gif')} />
+    return (
+        <>
+            <TextInput
+                value={filterName}
+                onChangeText={setFilterName}
+                label="Search characters name..."
+                selectionColor={charactersColor}
+                right={filterName && (
+                    <TextInput.Icon name={'close'} color={charactersColor} onPress={() => {
+                        setFilterName('')
+                        Keyboard.dismiss()
+                    }} />
+                )}
+                theme={charactersTheme}
+            />
+            <ScrollView
+                style={styles.list}
+                onScroll={scrollHandler}
+            >
+                {dataList.map(item => (
+                    <CharactersItem key={item.id} item={item} />
+                ))}
+
+                {loading && (
+                    <ActivityIndicator style={styles.preloader} size="large" color={charactersColor}/>
+                )}
+            </ScrollView>
+            {error && (
+                <Text style={styles.notFound}>Not Found</Text>
             )}
-        </ScrollView>
+        </>
     )
 }
 

@@ -1,17 +1,16 @@
-import { useLazyQuery } from '@apollo/client';
 import React, { useEffect, useState } from 'react';
-import { Image, Keyboard, NativeScrollEvent, NativeSyntheticEvent, Text } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import { TextInput } from 'react-native-paper';
+import { Keyboard, NativeScrollEvent, NativeSyntheticEvent, Text, ScrollView } from 'react-native';
+import { useLazyQuery } from '@apollo/client';
+import { ActivityIndicator, TextInput } from 'react-native-paper';
 import { getEpisodesQuery } from '../../api/apiQuery';
-import { episodeType, getEpisodesQueryType } from '../../api/apiTypes';
-import { episodesTheme } from '../../constants/themes';
-import EpisodesListItem from './EpisodesListItem';
+import { episodesItemType, getEpisodesQueryType } from '../../api/apiTypes';
+import { episodesColor, episodesTheme } from '../../constants/themes';
+import EpisodesItem from '../../components/EpisodesItem/EpisodesItem';
 import styles from './styles/EpisodesListStyles';
 
 const EpisodesList = () => {
     const [filterName, setFilterName] = useState<string>('')
-    const [dataList, setDataList] = useState<episodeType[]>([])
+    const [dataList, setDataList] = useState<episodesItemType[]>([])
     const [getEpisodes, { loading, error, data }] = useLazyQuery<getEpisodesQueryType, { page?: number | null, name?: string }>(getEpisodesQuery);
 
     useEffect(() => {
@@ -34,32 +33,31 @@ const EpisodesList = () => {
             <TextInput
                 value={filterName}
                 onChangeText={setFilterName}
-                label="Search episode name..."
-                selectionColor="red"
-                right={<TextInput.Icon name={'close'} color="red" onPress={() => {
+                label="Search episodes name..."
+                selectionColor={episodesColor}
+                right={filterName && (
+                    <TextInput.Icon name={'close'} color={episodesColor} onPress={() => {
                         setFilterName('')
                         Keyboard.dismiss()
-                    }} />}
-                style={styles.textInput}
+                    }} />
+                )}
                 theme={episodesTheme}
             />
             <ScrollView
-                onScroll={scrollHandler}
                 style={styles.list}
+                onScroll={scrollHandler}
             >
                 {dataList.map(item => (
-                    <EpisodesListItem key={item.id} item={item} />
+                    <EpisodesItem key={item.id} item={item} />
                 ))}
 
-                {error && (
-                    <Text>Not Found</Text>
-                )}
-
                 {loading && (
-                    // <ActivityIndicator size="large" />
-                    <Image style={styles.preloader} source={require('../../images/preloader.gif')} />
+                    <ActivityIndicator style={styles.preloader} size="large" color={episodesColor}/>
                 )}
             </ScrollView>
+            {error && (
+                <Text style={styles.notFound}>Not Found</Text>
+            )}
         </>
     )
 }

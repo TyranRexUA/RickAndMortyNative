@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { View, Image, ActivityIndicator } from 'react-native';
+import { View } from 'react-native';
 import CharactersList from './CharactersList';
 import styles from './styles/CharactersScreenStyle';
 
 const CharactersScreen = () => {
     return (
-        <View style={styles.container}>
+        <View style={styles.screenContainer}>
             <CharactersList />
         </View>
     )

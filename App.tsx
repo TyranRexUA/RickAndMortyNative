@@ -1,6 +1,6 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-import { Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, Text } from 'react-native';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -8,24 +8,25 @@ import EpisodesScreen from './src/screens/Episodes/EpisodesScreen';
 import SingleEpisodeScreen from './src/screens/SingleEpisode/SingleEpisodeScreen';
 import SingleCharacterScreen from './src/screens/SingleCharacter/SingleCharacterScreen';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { BottomTabNavigatorParams, CharactersStackNavigatorParams, EpisodesStackNavigatorParams } from './src/types/types';
-import CharactersScreen from './src/screens/Characters/CharactersScreen';
+import { bottomTabNavigatorParams, charactersStackNavigatorParams, episodesStackNavigatorParams } from './src/types/types';
 import { charactersColor, episodesColor } from './src/constants/themes';
+import CharactersScreen from './src/screens/Characters/CharactersScreen';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   uri: "https://rickandmortyapi.com/graphql"
 })
 
-const EpisodesStack = createStackNavigator<EpisodesStackNavigatorParams>();
-const CharactersStack = createStackNavigator<CharactersStackNavigatorParams>();
-const BottomTab = createMaterialBottomTabNavigator<BottomTabNavigatorParams>();
+const EpisodesStack = createStackNavigator<episodesStackNavigatorParams>();
+const CharactersStack = createStackNavigator<charactersStackNavigatorParams>();
+const BottomTab = createMaterialBottomTabNavigator<bottomTabNavigatorParams>();
 
 const EpisodesStackNavigator = () => (
   <EpisodesStack.Navigator
     screenOptions={{
       headerTintColor: 'white',
       headerStyle: styles.episodesHeader,
+      headerTitleStyle: styles.headerTitle
     }}
   >
 
@@ -40,9 +41,9 @@ const EpisodesStackNavigator = () => (
     <EpisodesStack.Screen
       name="SingleEpisode"
       component={SingleEpisodeScreen}
-      options={{
-        title: "SingleEpisode"
-      }}
+      options={({ route, navigation }) => ({
+        headerTitle: () => (<Text style={styles.headerTitle}>Episode {route.params.id}</Text>),
+      })}
     />
 
   </EpisodesStack.Navigator>
@@ -68,7 +69,7 @@ const CharactersStackNavigator = () => (
       name="SingleCharacter"
       component={SingleCharacterScreen}
       options={({ route, navigation }) => ({
-        title: "SingleCharacter",
+        headerTitle: () => (<Text style={styles.headerTitle}>{route.params.name}</Text>)
       })}
     />
 
@@ -111,6 +112,12 @@ export default function App() {
 const styles = StyleSheet.create({
   episodesHeader: {
     backgroundColor: episodesColor,
+  },
+  headerTitle: {
+    flex: 1,
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold'
   },
   charactersHeader: {
     backgroundColor: charactersColor

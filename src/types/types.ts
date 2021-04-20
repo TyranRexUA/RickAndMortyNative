@@ -2,28 +2,35 @@ import { MaterialBottomTabNavigationProp } from "@react-navigation/material-bott
 import { CompositeNavigationProp, NavigatorScreenParams } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 
-export type EpisodesStackNavigatorParams = {
+export type episodesStackNavigatorParams = {
     Init: undefined;
     SingleEpisode: { id: string }
 }
-export type CharactersStackNavigatorParams = {
+export type charactersStackNavigatorParams = {
     Init: undefined
-    SingleCharacter: { id: string }
+    SingleCharacter: { id: string, name: string }
 }
 
-export type BottomTabNavigatorParams = {
-    Episodes: NavigatorScreenParams<EpisodesStackNavigatorParams> | undefined;
-    Characters: NavigatorScreenParams<CharactersStackNavigatorParams> | undefined;
+export type bottomTabNavigatorParams = {
+    Episodes: NavigatorScreenParams<episodesStackNavigatorParams> | undefined;
+    Characters: NavigatorScreenParams<charactersStackNavigatorParams> | undefined;
 }
 
-export type EpisodesNavigationProp = CompositeNavigationProp<
-    MaterialBottomTabNavigationProp<BottomTabNavigatorParams>,
-    StackNavigationProp<EpisodesStackNavigatorParams>
+export type bottomNavigationProp = MaterialBottomTabNavigationProp<bottomTabNavigatorParams>
+
+export type episodesNavigationProp = CompositeNavigationProp<
+    StackNavigationProp<episodesStackNavigatorParams>,
+    MaterialBottomTabNavigationProp<bottomTabNavigatorParams>
 >;
 
-export type EpisodesRouteParams = StackNavigationProp<
-EpisodesStackNavigatorParams, 'SingleEpisode'
+export type charactersNavigationProp = CompositeNavigationProp<
+    StackNavigationProp<charactersStackNavigatorParams>,
+    MaterialBottomTabNavigationProp<bottomTabNavigatorParams>
+>;
+
+export type episodesRouteParams = StackNavigationProp<
+    episodesStackNavigatorParams, 'SingleEpisode'
 >
-export type CharactersRouteParams = StackNavigationProp<
-CharactersStackNavigatorParams, 'SingleCharacter'
+export type charactersRouteParams = StackNavigationProp<
+    charactersStackNavigatorParams, 'SingleCharacter'
 >

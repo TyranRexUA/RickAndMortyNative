@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
-import { getSingleCharacterType } from '../../api/apiTypes';
+import { getSingleCharacterType } from '../../types/apiTypes';
 import EpisodesItem from '../../components/EpisodesItem/EpisodesItem';
 import styles from './styles/SingleCharacterViewStyles';
 

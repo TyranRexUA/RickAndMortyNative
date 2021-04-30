@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { Keyboard, NativeScrollEvent, NativeSyntheticEvent, Text, ScrollView } from 'react-native';
 import { useLazyQuery } from '@apollo/client';
 import { ActivityIndicator, TextInput } from 'react-native-paper';
 import { getEpisodesQuery } from '../../api/apiQuery';
-import { episodesItemType, getEpisodesQueryType } from '../../api/apiTypes';
+import { episodesItemType, getEpisodesQueryType } from '../../types/apiTypes';
 import { episodesColor, episodesTheme } from '../../constants/themes';
 import EpisodesItem from '../../components/EpisodesItem/EpisodesItem';
 import styles from './styles/EpisodesListStyles';
@@ -14,7 +14,7 @@ const EpisodesList = () => {
     const [getEpisodes, { loading, error, data }] = useLazyQuery<getEpisodesQueryType, { page?: number | null, name?: string }>(getEpisodesQuery);
 
     useEffect(() => {
-        setDataList([])
+        dataList.length && setDataList([])
         getEpisodes({ variables: { page: 1, name: filterName } })
     }, [filterName])
 
@@ -31,12 +31,13 @@ const EpisodesList = () => {
     return (
         <>
             <TextInput
+                testID="TextInput"
                 value={filterName}
                 onChangeText={setFilterName}
                 label="Search episodes name..."
                 selectionColor={episodesColor}
                 right={filterName && (
-                    <TextInput.Icon name={'close'} color={episodesColor} onPress={() => {
+                    <TextInput.Icon name={'close'} testID="clearInputText" color={episodesColor} onPress={() => {
                         setFilterName('')
                         Keyboard.dismiss()
                     }} />
@@ -44,6 +45,7 @@ const EpisodesList = () => {
                 theme={episodesTheme}
             />
             <ScrollView
+                testID="ScrollView"
                 style={styles.list}
                 onScroll={scrollHandler}
             >
@@ -52,7 +54,7 @@ const EpisodesList = () => {
                 ))}
 
                 {loading && (
-                    <ActivityIndicator style={styles.preloader} size="large" color={episodesColor}/>
+                    <ActivityIndicator testID="Loader" style={styles.preloader} size="large" color={episodesColor} />
                 )}
             </ScrollView>
             {error && (

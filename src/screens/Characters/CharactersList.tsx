@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Keyboard, NativeScrollEvent, NativeSyntheticEvent, Text, ScrollView } from 'react-native';
 import { useLazyQuery } from '@apollo/client';
 import { ActivityIndicator, TextInput } from 'react-native-paper';
-import { charactersItemType, getCharactersQueryType } from '../../api/apiTypes';
+import { charactersItemType, getCharactersQueryType } from '../../types/apiTypes';
 import { charactersColor, charactersTheme } from '../../constants/themes';
 import CharactersItem from '../../components/CharactersItem/CharactersItem';
 import { getCharactersQuery } from '../../api/apiQuery';
@@ -31,12 +31,13 @@ const CharactersList = () => {
     return (
         <>
             <TextInput
+                testID="TextInput"
                 value={filterName}
                 onChangeText={setFilterName}
                 label="Search characters name..."
                 selectionColor={charactersColor}
                 right={filterName && (
-                    <TextInput.Icon name={'close'} color={charactersColor} onPress={() => {
+                    <TextInput.Icon name={'close'} testID="clearInputText" color={charactersColor} onPress={() => {
                         setFilterName('')
                         Keyboard.dismiss()
                     }} />
@@ -44,6 +45,7 @@ const CharactersList = () => {
                 theme={charactersTheme}
             />
             <ScrollView
+                testID="ScrollView"
                 style={styles.list}
                 onScroll={scrollHandler}
             >
@@ -52,7 +54,7 @@ const CharactersList = () => {
                 ))}
 
                 {loading && (
-                    <ActivityIndicator style={styles.preloader} size="large" color={charactersColor}/>
+                    <ActivityIndicator testID="Loader" style={styles.preloader} size="large" color={charactersColor} />
                 )}
             </ScrollView>
             {error && (

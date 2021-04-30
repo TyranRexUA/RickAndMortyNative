@@ -1,0 +1,1337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodesItem with data Snapshot checking 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "flex": 1,
+      "paddingHorizontal": 10,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "flex": 1,
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "marginTop": 20,
+          "textAlign": "center",
+        }
+      }
+    >
+      Pilot
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginTop": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "marginRight": 10,
+          }
+        }
+      >
+        AIR DATE
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      >
+        December 2, 2013
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginTop": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "marginRight": 10,
+          }
+        }
+      >
+        CHARACTERS
+      </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Rick Sanchez
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Morty Smith
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/35.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Bepisian
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/38.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Beth Smith
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/62.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Canklanker Thom
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/92.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Davin
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/127.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Frank Palicky
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/144.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Glenn
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/158.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Hookah Alien
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/175.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Jerry Smith
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/179.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Jessica
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/181.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Jessica's Friend
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/239.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Mr. Goldenfold
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/249.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Mrs. Sanchez
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/271.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Principal Vagina
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/338.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Summer Smith
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/394.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Davin
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/395.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Greebybobe
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="CharactersItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/435.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 100,
+                "height": 30,
+                "marginRight": 10,
+                "width": 30,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 16,
+              }
+            }
+          >
+            Pripudlian
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 0.5,
+              },
+              undefined,
+              undefined,
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

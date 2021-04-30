@@ -3,8 +3,8 @@ import { Text, View } from 'react-native';
 import { useQuery } from "@apollo/client";
 import { useRoute } from "@react-navigation/core";
 import { getSingleEpisodeQuery } from "../../api/apiQuery";
-import { getSingleEpisodeType } from '../../api/apiTypes';
-import { episodesStackNavigatorParams } from '../../types/types';
+import { getSingleEpisodeType } from '../../types/apiTypes';
+import { episodesStackNavigatorParams } from '../../types/navigationTypes';
 import { RouteProp } from '@react-navigation/native';
 import SingleEpisodeView from './SingleEpisodeView';
 import { ActivityIndicator } from 'react-native-paper';
@@ -13,9 +13,9 @@ import styles from './styles/SingleEpisodeStyles';
 
 const SingleEpisodeScreen = () => {
     const route = useRoute<RouteProp<episodesStackNavigatorParams, 'SingleEpisode'>>()
-    const { loading, error, data } = useQuery<getSingleEpisodeType, { id: string }>(getSingleEpisodeQuery, { variables: { id: route.params.id } });
+    const { loading, data } = useQuery<getSingleEpisodeType, { id: string }>(getSingleEpisodeQuery, { variables: { id: route.params.id } });
 
-    if (loading) return (<ActivityIndicator size="large" color={episodesColor} style={styles.preloader}/>)
+    if (loading) return (<ActivityIndicator testID="Loader" size="large" color={episodesColor} style={styles.preloader}/>)
     if (data) return (<SingleEpisodeView episode={data?.episode}/>)
 
     return (
